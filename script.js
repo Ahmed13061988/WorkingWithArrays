@@ -93,3 +93,8 @@ arr.splice(3, 2);
 console.log(arr);
 arr.splice(0, 1, 'Alif');
 console.log(arr);
+
+const array = ['Ahmed', 'Ali', 'Hussein'];
+console.log(array);
+array.splice(2, 1, 'Ghaeb', 'Alubaidi');
+console.log(array);
