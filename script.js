@@ -131,7 +131,17 @@ for (const [i, movement] of movements1.entries()) {
 }
 
 movements1.forEach(function (movement, index, array) {
-  console.log(`${index}: ${movement}`);
+  console.log(`${index + 1}: ${movement}`);
   //console.log(index); // this will return the index of the element
   //console.log(array); // this will return the entire array
+});
+
+const currencies1 = new Map([
+  ['USD', 'United States dollar'],
+  ['EUR', 'Euro'],
+  ['GBP', 'Pound sterling'],
+]);
+
+currencies1.forEach(function (value, key, map) {
+  console.log(`${key}: ${value}`);
 });
