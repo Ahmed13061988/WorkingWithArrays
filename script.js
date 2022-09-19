@@ -110,3 +110,8 @@ console.log(concatedArr);
 
 //JOIN
 console.log(anotherArr.join('-'));
+
+//At method
+const arrAt = [23, 11, 64];
+console.log(arrAt[0]);
+console.log(arrAt.at(0));
