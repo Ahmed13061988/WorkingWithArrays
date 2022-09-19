@@ -98,3 +98,7 @@ const array = ['Ahmed', 'Ali', 'Hussein'];
 console.log(array);
 array.splice(2, 1, 'Ghaeb', 'Alubaidi');
 console.log(array);
+
+const anotherArr = ['Skriniar', 'Brozovic', 'Samir'];
+console.log(anotherArr.reverse());
+console.log(anotherArr);
