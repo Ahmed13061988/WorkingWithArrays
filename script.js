@@ -129,3 +129,7 @@ for (const movement of movements1) {
       : `You withdrew ${Math.abs(movement)}`
   );
 }
+
+movements1.forEach(function (movement) {
+  console.log(movement);
+});
