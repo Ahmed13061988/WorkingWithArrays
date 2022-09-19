@@ -101,21 +101,27 @@ console.log(array);
 
 //Reverse
 const anotherArr = ['Skriniar', 'Brozovic', 'Samir'];
-console.log(anotherArr.reverse());
-console.log(anotherArr);
+// console.log(anotherArr.reverse());
+// console.log(anotherArr);
 
 //Concat
 const concatedArr = anotherArr.concat(array);
-console.log(concatedArr);
+//console.log(concatedArr);
 
 //JOIN
-console.log(anotherArr.join('-'));
+//console.log(anotherArr.join('-'));
 
 //At method
 const arrAt = [23, 11, 64];
-console.log(arrAt[0]);
-console.log(arrAt.at(0));
-console.log(arrAt.slice(-1)[0]); // last element
-console.log(arrAt[arrAt.length - 1]); // last element
-console.log(arrAt.at(-1)); // last element
-console.log(arrAt.at(-2));
+// console.log(arrAt[0]);
+// console.log(arrAt.at(0));
+// console.log(arrAt.slice(-1)[0]); // last element
+// console.log(arrAt[arrAt.length - 1]); // last element
+// console.log(arrAt.at(-1)); // last element
+// console.log(arrAt.at(-2));
+
+const movements1 = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+for (const movement of movements1) {
+  console.log(movement > 0 ? 'this is deposit' : 'this is withdraw');
+}
