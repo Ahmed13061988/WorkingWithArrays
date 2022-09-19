@@ -122,14 +122,16 @@ const arrAt = [23, 11, 64];
 
 const movements1 = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-for (const movement of movements1) {
+for (const [i, movement] of movements1.entries()) {
   console.log(
     movement > 0
-      ? `You diposited ${movement}`
-      : `You withdrew ${Math.abs(movement)}`
+      ? `${i + 1} You diposited ${movement}`
+      : `${i + 1} You withdrew ${Math.abs(movement)}`
   );
 }
 
-movements1.forEach(function (movement) {
-  console.log(movement);
+movements1.forEach(function (movement, index, array) {
+  console.log(`${index}: ${movement}`);
+  //console.log(index); // this will return the index of the element
+  //console.log(array); // this will return the entire array
 });
