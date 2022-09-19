@@ -99,6 +99,11 @@ console.log(array);
 array.splice(2, 1, 'Ghaeb', 'Alubaidi');
 console.log(array);
 
+//Reverse
 const anotherArr = ['Skriniar', 'Brozovic', 'Samir'];
 console.log(anotherArr.reverse());
 console.log(anotherArr);
+
+//Concat
+const concatedArr = anotherArr.concat(array);
+console.log(concatedArr);
