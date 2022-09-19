@@ -107,3 +107,6 @@ console.log(anotherArr);
 //Concat
 const concatedArr = anotherArr.concat(array);
 console.log(concatedArr);
+
+//JOIN
+console.log(anotherArr.join('-'));
