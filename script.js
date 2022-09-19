@@ -145,3 +145,9 @@ const currencies1 = new Map([
 currencies1.forEach(function (value, key, map) {
   console.log(`${key}: ${value}`);
 });
+
+const currenciesUnique = new Set(currencies1);
+
+currenciesUnique.forEach(function (value, key, set) {
+  console.log(`${key}: ${value}`); // the key is same as value, because set doen't have keys or index at all
+});
