@@ -123,5 +123,9 @@ const arrAt = [23, 11, 64];
 const movements1 = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 for (const movement of movements1) {
-  console.log(movement > 0 ? 'this is deposit' : 'this is withdraw');
+  console.log(
+    movement > 0
+      ? `You diposited ${movement}`
+      : `You withdrew ${Math.abs(movement)}`
+  );
 }
