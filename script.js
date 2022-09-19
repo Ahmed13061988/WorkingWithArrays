@@ -115,3 +115,7 @@ console.log(anotherArr.join('-'));
 const arrAt = [23, 11, 64];
 console.log(arrAt[0]);
 console.log(arrAt.at(0));
+console.log(arrAt.slice(-1)[0]); // last element
+console.log(arrAt[arrAt.length - 1]); // last element
+console.log(arrAt.at(-1)); // last element
+console.log(arrAt.at(-2));
