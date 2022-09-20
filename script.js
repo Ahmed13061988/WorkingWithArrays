@@ -95,9 +95,18 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 const conversion = 1.1;
 const movemnetsUSD = movements.map(function (mov) {
-  return mov * conversion;
+  // return mov * conversion;
+  return 23;
 });
-console.log(movements, movemnetsUSD);
+
+const movemnetsUSDArrow = movements.map(move => move * conversion);
+
+const movementsUSDFor = [];
+
+for (const move of movements) {
+  movementsUSDFor.push(move * conversion);
+}
+console.log(movemnetsUSD, movementsUSDFor);
 /////////////////////////////////////////////////
 
 // let arr = ['a', 'b', 'c', 'd', 'e'];
