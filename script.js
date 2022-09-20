@@ -109,13 +109,17 @@ for (const move of movements) {
 
 console.log(movemnetsUSD, movementsUSDFor);
 
-const movements2 = movements.map((mov, i) => {
-  if (mov > 0) {
-    return `Movement ${i + 1}: You diposeted ${mov}`;
-  } else {
-    return `Movement ${i + 1}: You withdrew ${Math.abs(mov)}`;
-  }
-});
+const movements2 = movements.map(
+  (mov, i) =>
+    `Movement ${i + 1}: You ${mov > 0 ? `diposeted` : `withdrew`} ${Math.abs(
+      mov
+    )}`
+  // if (mov > 0) {
+  //   return `Movement ${i + 1}: You diposeted ${mov}`;
+  // } else {
+  //   return `Movement ${i + 1}: You withdrew ${Math.abs(mov)}`;
+  // }
+);
 
 console.log(movements2);
 /////////////////////////////////////////////////
