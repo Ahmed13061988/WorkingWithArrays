@@ -93,6 +93,11 @@ const currencies = new Map([
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
+const conversion = 1.1;
+const movemnetsUSD = movements.map(function (mov) {
+  return mov * conversion;
+});
+console.log(movements, movemnetsUSD);
 /////////////////////////////////////////////////
 
 // let arr = ['a', 'b', 'c', 'd', 'e'];
