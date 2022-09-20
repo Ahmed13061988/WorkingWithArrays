@@ -96,7 +96,7 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const conversion = 1.1;
 const movemnetsUSD = movements.map(function (mov) {
   // return mov * conversion;
-  return 23;
+  return mov * conversion;
 });
 
 const movemnetsUSDArrow = movements.map(move => move * conversion);
@@ -106,7 +106,18 @@ const movementsUSDFor = [];
 for (const move of movements) {
   movementsUSDFor.push(move * conversion);
 }
+
 console.log(movemnetsUSD, movementsUSDFor);
+
+const movements2 = movements.map((mov, i) => {
+  if (mov > 0) {
+    return `Movement ${i + 1}: You diposeted ${mov}`;
+  } else {
+    return `Movement ${i + 1}: You withdrew ${Math.abs(mov)}`;
+  }
+});
+
+console.log(movements2);
 /////////////////////////////////////////////////
 
 // let arr = ['a', 'b', 'c', 'd', 'e'];
