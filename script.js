@@ -82,8 +82,12 @@ const displayMovements = function (movements) {
 displayMovements(account1.movements);
 
 const namesOnly = accounts.map(name => name.owner.split(' '));
+let initials = [];
 namesOnly.forEach(function (name) {
-  name[0];
+  for (let i = 0; i < name.length; i++) {
+    initials.push(name[i].slice(0, 1));
+  }
+  console.log(initials);
 });
 
 /////////////////////////////////////////////////
