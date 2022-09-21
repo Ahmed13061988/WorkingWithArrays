@@ -81,6 +81,11 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements);
 
+const namesOnly = accounts.map(name => name.owner.split(' '));
+namesOnly.forEach(function (name) {
+  name[0];
+});
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -150,17 +155,17 @@ const superHeroes = [
   },
 ];
 
-const firstName = superHeroes.map(first => first.name.split(' ')[0]);
-console.log('firstName', firstName);
+// const firstName = superHeroes.map(first => first.name.split(' ')[0]);
+// console.log('firstName', firstName);
 
-const namesOnly = superHeroes.map(name => name.name);
-console.log('names only', namesOnly);
+// const namesOnly = superHeroes.map(name => name.name);
+// console.log('names only', namesOnly);
 
-const nameAndRealm = superHeroes.map(info => ({
-  name: info.name,
-  realm: info.realm,
-}));
-console.log('Name and Realm', nameAndRealm);
+// const nameAndRealm = superHeroes.map(info => ({
+//   name: info.name,
+//   realm: info.realm,
+// }));
+// console.log('Name and Realm', nameAndRealm);
 
 /////////////////////////////////////////////////
 
