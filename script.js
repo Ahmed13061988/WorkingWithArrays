@@ -122,6 +122,46 @@ const movements2 = movements.map(
 );
 
 console.log(movements2);
+
+const superHeroes = [
+  {
+    name: 'Scorpion Hanzo',
+    realm: 'Nethererelm',
+    age: 'Unknown',
+    side: 'Good',
+  },
+  {
+    name: 'Sub-Zero Bi-Han',
+    realm: 'Eart',
+    age: 'Unknown',
+    side: 'Good',
+  },
+  {
+    name: 'Show-Kahn Emperor',
+    realm: 'Out-World',
+    age: 'Unknown',
+    side: 'Bad',
+  },
+  {
+    name: 'Lui-Kang Lui',
+    realm: 'Earth',
+    age: '35',
+    side: 'Good',
+  },
+];
+
+const firstName = superHeroes.map(first => first.name.split(' ')[0]);
+console.log('firstName', firstName);
+
+const namesOnly = superHeroes.map(name => name.name);
+console.log('names only', namesOnly);
+
+const nameAndRealm = superHeroes.map(info => ({
+  name: info.name,
+  realm: info.realm,
+}));
+console.log('Name and Realm', nameAndRealm);
+
 /////////////////////////////////////////////////
 
 // let arr = ['a', 'b', 'c', 'd', 'e'];
