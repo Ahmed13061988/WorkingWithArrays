@@ -183,6 +183,17 @@ const superHeroes = [
   },
 ];
 
+const initials = function (array) {
+  array.forEach(function (int) {
+    int.initials = int.name
+      .split(' ')
+      .map(name => name[0])
+      .join('');
+  });
+};
+initials(superHeroes);
+console.log(superHeroes);
+
 // const firstName = superHeroes.map(first => first.name.split(' ')[0]);
 // console.log('firstName', firstName);
 
