@@ -261,6 +261,12 @@ const deposits = movements1.filter(function (mov) {
 
 console.log(deposits);
 
+const withdrawls = movements1.filter(function (withdrawal) {
+  return withdrawal < 0;
+});
+
+console.log(withdrawls);
+
 // for (const [i, movement] of movements1.entries()) {
 //   console.log(
 //     movement > 0
