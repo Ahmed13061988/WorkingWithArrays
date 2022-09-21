@@ -253,7 +253,13 @@ console.log(superHeroes);
 // // console.log(arrAt.at(-1)); // last element
 // // console.log(arrAt.at(-2));
 
-// const movements1 = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const movements1 = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const deposits = movements1.filter(function (mov) {
+  return mov > 0;
+});
+
+console.log(deposits);
 
 // for (const [i, movement] of movements1.entries()) {
 //   console.log(
