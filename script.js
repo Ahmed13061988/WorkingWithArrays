@@ -88,7 +88,6 @@ displayMovements(account1.movements);
 //     return name;
 //   });
 // console.log(user);
-const user = 'Jonas Schmedtmann';
 
 const createUserName = function (accs) {
   accs.forEach(function (acc) {
@@ -101,7 +100,25 @@ const createUserName = function (accs) {
 };
 
 createUserName(accounts);
-console.log(accounts);
+let balances = [];
+
+const calculateBalance = function (acs) {
+  acs.forEach(function (acc) {
+    balances.push(
+      (acc.balance = acc.movements.reduce((acum, mov) => acum + mov, 0))
+    );
+
+    balances.forEach(function (move, i) {
+      labelBalance.innerHTML = '';
+      const html = `
+      <p class="balance__value">${move}€</p>
+      `;
+      labelBalance.insertAdjacentHTML('afterbegin', html);
+    });
+  });
+};
+
+calculateBalance(accounts);
 
 // console.log(userName);
 
@@ -304,7 +321,7 @@ var reverseWords = function (s) {
     .join(' ');
 };
 
-console.log(reverseWords(s));
+//console.log(reverseWords(s));
 
 const mama = 'Salwa Kareem';
 
@@ -313,41 +330,30 @@ const mamaFinal = mama1
   .map(letter => letter.split('').reverse().join(''))
   .join(' ');
 
-console.log(mamaFinal);
+//console.log(mamaFinal);
 
 const hifa = ['he', 'is', 'a guniea', 'pig'];
 let rHifa = [];
 for (let i = hifa.length - 1; i >= 0; i--) {
   let index = hifa.length - 1 - i; // (3-3) 0,(3-2) 1, (3-1) 2,(3-0) 3
-  console.log(index); // 0, 1, 2, 3
+  //console.log(index); // 0, 1, 2, 3
   rHifa[index] = hifa[i];
 }
-console.log(rHifa);
+//console.log(rHifa);
 
 //console.log(hifa.reverse().join(' '));
 
 console.log(account1.movements);
 
-const resultBalance = account1.movements.reduce(function (
-  acc,
-  curr,
-  i,
-  wholeArr
-) {
-  console.log(`iteration ${i} ${acc}`);
+const resultBalance = account1.movements.reduce(function (acc, curr, i) {
   return acc + curr;
-},
-0);
+}, 0);
 
 const resultBalanceArrow = account1.movements.reduce(
   (acc, cur) => acc + cur,
   0
 );
-console.log(resultBalanceArrow);
-
-console.log(resultBalance);
 
 let balance = 0;
 
 for (const mov of account1.movements) balance += mov;
-console.log(balance);
