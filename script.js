@@ -314,3 +314,7 @@ const mamaFinal = mama1
   .join(' ');
 
 console.log(mamaFinal);
+
+const hifa = ['he', 'is', 'a guniea', 'pig'];
+
+console.log(hifa.reverse().join(' '));
