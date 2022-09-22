@@ -305,3 +305,12 @@ var reverseWords = function (s) {
 };
 
 console.log(reverseWords(s));
+
+const mama = 'Salwa Kareem';
+
+const mama1 = mama.split(' ');
+const mamaFinal = mama1
+  .map(letter => letter.split('').reverse().join(''))
+  .join(' ');
+
+console.log(mamaFinal);
