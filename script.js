@@ -334,5 +334,9 @@ const resultBalance = account1.movements.reduce(function (
   i,
   wholeArr
 ) {
-  acc + curr;
-});
+  console.log(`iteration ${i} ${acc}`);
+  return acc + curr;
+},
+0);
+
+console.log(resultBalance);
