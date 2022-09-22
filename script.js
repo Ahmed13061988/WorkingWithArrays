@@ -340,3 +340,10 @@ const resultBalance = account1.movements.reduce(function (
 0);
 
 console.log(resultBalance);
+
+let balance = 0;
+
+for (const mov of account1.movements) {
+  balance += mov;
+  console.log(balance);
+}
