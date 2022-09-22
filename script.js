@@ -261,9 +261,7 @@ const deposits = movements1.filter(function (mov) {
 
 console.log(deposits);
 
-const withdrawls = movements1.filter(function (withdrawal) {
-  return withdrawal < 0;
-});
+const withdrawls = account1.movements.filter(withdrawal => withdrawal < 0);
 
 console.log(withdrawls);
 
@@ -296,3 +294,14 @@ console.log(withdrawls);
 // currenciesUnique.forEach(function (value, key, set) {
 //   console.log(` ${value}`); // the key is same as value, because set doen't have keys or index at all
 // });
+
+console.log('--------LeetCode------');
+let s = "Let's take LeetCode contest";
+var reverseWords = function (s) {
+  return s
+    .split(' ')
+    .map(item => item.split('').reverse().join(''))
+    .join(' ');
+};
+
+console.log(reverseWords(s));
