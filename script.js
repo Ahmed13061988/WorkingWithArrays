@@ -316,5 +316,23 @@ const mamaFinal = mama1
 console.log(mamaFinal);
 
 const hifa = ['he', 'is', 'a guniea', 'pig'];
+let rHifa = [];
+for (let i = hifa.length - 1; i >= 0; i--) {
+  let index = hifa.length - 1 - i; // (3-3) 0,(3-2) 1, (3-1) 2,(3-0) 3
+  console.log(index); // 0, 1, 2, 3
+  rHifa[index] = hifa[i];
+}
+console.log(rHifa);
 
-console.log(hifa.reverse().join(' '));
+//console.log(hifa.reverse().join(' '));
+
+console.log(account1.movements);
+
+const resultBalance = account1.movements.reduce(function (
+  acc,
+  curr,
+  i,
+  wholeArr
+) {
+  acc + curr;
+});
