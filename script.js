@@ -339,11 +339,15 @@ const resultBalance = account1.movements.reduce(function (
 },
 0);
 
+const resultBalanceArrow = account1.movements.reduce(
+  (acc, cur) => acc + cur,
+  0
+);
+console.log(resultBalanceArrow);
+
 console.log(resultBalance);
 
 let balance = 0;
 
-for (const mov of account1.movements) {
-  balance += mov;
-  console.log(balance);
-}
+for (const mov of account1.movements) balance += mov;
+console.log(balance);
