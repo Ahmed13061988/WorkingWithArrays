@@ -81,14 +81,6 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements);
 
-// const user = accounts
-//   .map(name => name.owner.split(' '))
-//   .map(name => name.join(' '))
-//   .forEach(function (name) {
-//     return name;
-//   });
-// console.log(user);
-
 const createUserName = function (accs) {
   accs.forEach(function (acc) {
     acc.username = acc.owner
@@ -100,8 +92,8 @@ const createUserName = function (accs) {
 };
 
 createUserName(accounts);
-let balances = [];
 
+let balances = [];
 const calculateBalance = function (acs) {
   acs.forEach(function (acc) {
     balances.push(
@@ -357,3 +349,13 @@ const resultBalanceArrow = account1.movements.reduce(
 let balance = 0;
 
 for (const mov of account1.movements) balance += mov;
+
+const max = account1.movements.reduce((acc, mov) => {
+  if (acc > mov) {
+    return acc;
+  } else {
+    return (acc = mov);
+  }
+});
+
+console.log('here', max);
