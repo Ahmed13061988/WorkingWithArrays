@@ -362,7 +362,7 @@ const max = account1.movements.reduce((acc, mov) => {
   if (acc > mov) {
     return acc;
   } else {
-    return (acc = mov);
+    return mov;
   }
 });
 
