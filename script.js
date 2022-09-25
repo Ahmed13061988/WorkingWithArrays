@@ -94,23 +94,25 @@ const createUserName = function (accs) {
 createUserName(accounts);
 
 let balances = [];
-const calculateBalance = function (acs) {
-  acs.forEach(function (acc) {
-    balances.push(
-      (acc.balance = acc.movements.reduce((acum, mov) => acum + mov, 0))
-    );
+const calculateBalance = function (movement) {
+  const balance = account1.movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance} EUR`;
+  // acs.forEach(function (acc) {
+  //   balances.push(
+  //     (acc.balance = acc.movements.reduce((acum, mov) => acum + mov, 0))
+  //   );
 
-    balances.forEach(function (move, i) {
-      labelBalance.innerHTML = '';
-      const html = `
-      <p class="balance__value">${move}€</p>
-      `;
-      labelBalance.insertAdjacentHTML('afterbegin', html);
-    });
-  });
+  //   balances.forEach(function (move, i) {
+  //     labelBalance.innerHTML = '';
+  //     const html = `
+  //     <p class="balance__value">${move}€</p>
+  //     `;
+  //     labelBalance.insertAdjacentHTML('afterbegin', html);
+  //   });
+  // });
 };
 
-calculateBalance(accounts);
+calculateBalance(account1.movements);
 
 // console.log(userName);
 
@@ -368,7 +370,9 @@ const max = account1.movements.reduce((acc, mov) => {
 
 console.log('here', max);
 
-cons totalDepositInUSA = account1.movements
+const totalDepositInUSA = account1.movements
   .filter(move => move > 0)
   .map(mov => mov * 1.1)
   .reduce((acc, value) => acc + value);
+
+console.log(totalDepositInUSA);
