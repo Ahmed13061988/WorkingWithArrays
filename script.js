@@ -367,3 +367,8 @@ const max = account1.movements.reduce((acc, mov) => {
 });
 
 console.log('here', max);
+
+cons totalDepositInUSA = account1.movements
+  .filter(move => move > 0)
+  .map(mov => mov * 1.1)
+  .reduce((acc, value) => acc + value);
