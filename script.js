@@ -72,7 +72,7 @@ const displayMovements = function (movements) {
      <div class="movements__type movements__type--${type}">${
       i + 1
     } ${type}</div>
-     <div class="movements__value">${mov} 💶</div>
+     <div class="movements__value">${mov} €</div>
   </div>   
     `;
     containerMovements.insertAdjacentHTML('afterbegin', html);
@@ -97,14 +97,19 @@ const calcDisplaySummary = function (movements) {
   const incomes = account1.movements
     .filter(mov => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
-  labelSumIn.textContent = `${incomes} 💶 `;
+  labelSumIn.textContent = `${incomes} € `;
+
+  const out = account1.movements
+    .filter(mov => mov < 0)
+    .reduce((acc, mov) => acc + mov);
+  labelSumOut.textContent = `${out} €`;
 };
 
 calcDisplaySummary(account1.movements);
 
-const calculateBalance = function (movement) {
-  const balance = account1.movements.reduce((acc, mov) => acc + mov, 0);
-  labelBalance.textContent = `${balance} 💶`;
+const calculateBalance = function (movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance} €`;
 };
 calculateBalance(account1.movements);
 
