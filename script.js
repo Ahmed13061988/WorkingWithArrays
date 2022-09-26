@@ -384,4 +384,4 @@ const totalDepositInUSA = account1.movements
 //console.log(totalDepositInUSA);
 
 const withdrawls1 = account1.movements.find(mov => mov < 0);
-console.log('heree', withdrawls);
+console.log('heree', withdrawls1);
