@@ -120,6 +120,13 @@ const calculateBalance = function (movements) {
 };
 calculateBalance(account1.movements);
 
+//Event listener
+
+btnLogin.addEventListener('click', function (e) {
+  e.preventDefault();
+  console.log('Login');
+});
+
 // console.log(userName);
 
 // const namesOnly = accounts.map(name => name.owner.split(' '));
@@ -395,4 +402,4 @@ let accountFor = {};
 for (const account of accounts) {
   if (account.owner === 'Jessica Davis') accountFor = Object.assign(account);
 }
-console.log(accountFor);
+//console.log(accountFor);
