@@ -386,7 +386,13 @@ const totalDepositInUSA = account1.movements
 const withdrawls1 = account1.movements.find(mov => mov < 0);
 //console.log('heree', withdrawls1);
 
-console.log(accounts);
+//console.log(accounts);
 
 const account = accounts.find(acc => acc.owner === 'Jessica Davis');
-console.log(account);
+//console.log(account);
+
+let accountFor = {};
+for (const account of accounts) {
+  if (account.owner === 'Jessica Davis') accountFor = Object.assign(account);
+}
+console.log(accountFor);
