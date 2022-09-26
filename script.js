@@ -157,7 +157,7 @@ for (const move of movements) {
   movementsUSDFor.push(move * conversion);
 }
 
-console.log(movemnetsUSD, movementsUSDFor);
+//console.log(movemnetsUSD, movementsUSDFor);
 
 const movements2 = movements.map(
   (mov, i) =>
@@ -171,7 +171,7 @@ const movements2 = movements.map(
   // }
 );
 
-console.log(movements2);
+//console.log(movements2);
 
 const superHeroes = [
   {
@@ -209,7 +209,7 @@ const initials = function (array) {
   });
 };
 initials(superHeroes);
-console.log(superHeroes);
+//console.log(superHeroes);
 
 // const firstName = superHeroes.map(first => first.name.split(' ')[0]);
 // console.log('firstName', firstName);
@@ -276,11 +276,11 @@ const deposits = movements1.filter(function (mov) {
   return mov > 0;
 });
 
-console.log(deposits);
+//console.log(deposits);
 
 const withdrawls = account1.movements.filter(withdrawal => withdrawal < 0);
 
-console.log(withdrawls);
+//console.log(withdrawls);
 
 // for (const [i, movement] of movements1.entries()) {
 //   console.log(
@@ -343,7 +343,7 @@ for (let i = hifa.length - 1; i >= 0; i--) {
 
 //console.log(hifa.reverse().join(' '));
 
-console.log(account1.movements);
+//console.log(account1.movements);
 
 const resultBalance = account1.movements.reduce(function (acc, curr, i) {
   return acc + curr;
@@ -374,7 +374,7 @@ const max = account1.movements.reduce((acc, mov) => {
   }
 });
 
-console.log('here', max);
+//console.log('here', max);
 
 const totalDepositInUSA = account1.movements
   .filter(move => move > 0)
@@ -384,4 +384,9 @@ const totalDepositInUSA = account1.movements
 //console.log(totalDepositInUSA);
 
 const withdrawls1 = account1.movements.find(mov => mov < 0);
-console.log('heree', withdrawls1);
+//console.log('heree', withdrawls1);
+
+console.log(accounts);
+
+const account = accounts.find(acc => acc.owner === 'Jessica Davis');
+console.log(account);
