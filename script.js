@@ -134,6 +134,9 @@ let logined = btnLogin.addEventListener('click', function (e) {
     displayMovements(currentAccount.movements);
     calcDisplaySummary(currentAccount.movements);
     calculateBalance(currentAccount.movements);
+    inputLoginUsername.value = '';
+    inputLoginPin.value = '';
+    inputLoginPin.blur();
   }
 });
 
