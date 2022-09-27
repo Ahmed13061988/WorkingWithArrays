@@ -91,20 +91,20 @@ const createUserName = function (accs) {
 
 createUserName(accounts);
 
-const calcDisplaySummary = function (movements) {
-  const incomes = movements
+const calcDisplaySummary = function (account) {
+  const incomes = account.movements
     .filter(mov => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
   labelSumIn.textContent = `${incomes} € `;
 
-  const out = movements
+  const out = account.movements
     .filter(mov => mov < 0)
     .reduce((acc, mov) => acc + mov, 0);
   labelSumOut.textContent = `${Math.abs(out)} €`;
 
-  const intrest = movements
+  const intrest = account.movements
     .filter(move => move > 0)
-    .map(deposit => (deposit * 1.2) / 100)
+    .map(deposit => (deposit * account.intrestRate) / 100)
     .filter(mov => mov >= 1)
     .reduce((acc, value) => acc + value, 0);
   labelSumInterest.textContent = `${intrest} €`;
@@ -132,7 +132,7 @@ let logined = btnLogin.addEventListener('click', function (e) {
     containerApp.style.opacity = 100;
     console.log(currentAccount.movements);
     displayMovements(currentAccount.movements);
-    calcDisplaySummary(currentAccount.movements);
+    calcDisplaySummary(currentAccount);
     calculateBalance(currentAccount.movements);
     inputLoginUsername.value = '';
     inputLoginPin.value = '';
