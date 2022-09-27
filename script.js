@@ -122,9 +122,14 @@ calculateBalance(account1.movements);
 
 //Event listener
 
-btnLogin.addEventListener('click', function (e) {
+let currentAccount;
+
+let logined = btnLogin.addEventListener('click', function (e) {
   e.preventDefault();
-  console.log('Login');
+  currentAccount = accounts.find(
+    acc => acc.username === inputLoginUsername.value
+  );
+  console.log(currentAccount);
 });
 
 // console.log(userName);
