@@ -79,10 +79,6 @@ const displayMovements = function (movements) {
   });
 };
 
-//const accountsMovements = accounts.map(account => account.movements);
-
-//displayMovements(account1.movements);
-
 const createUserName = function (accs) {
   accs.forEach(function (acc) {
     acc.username = acc.owner
@@ -101,7 +97,9 @@ const calcDisplaySummary = function (movements) {
     .reduce((acc, mov) => acc + mov, 0);
   labelSumIn.textContent = `${incomes} € `;
 
-  const out = movements.filter(mov => mov < 0).reduce((acc, mov) => acc + mov);
+  const out = movements
+    .filter(mov => mov < 0)
+    .reduce((acc, mov) => acc + mov, 0);
   labelSumOut.textContent = `${Math.abs(out)} €`;
 
   const intrest = movements
@@ -112,13 +110,10 @@ const calcDisplaySummary = function (movements) {
   labelSumInterest.textContent = `${intrest} €`;
 };
 
-//calcDisplaySummary(account1.movements);
-
 const calculateBalance = function (movements) {
   const balance = movements.reduce((acc, mov) => acc + mov, 0);
   labelBalance.textContent = `${balance} €`;
 };
-//calculateBalance(account1.movements);
 
 //Event listener
 
@@ -139,11 +134,7 @@ let logined = btnLogin.addEventListener('click', function (e) {
     displayMovements(currentAccount.movements);
     calcDisplaySummary(currentAccount.movements);
     calculateBalance(currentAccount.movements);
-    //Display movements
-    //Display balance
-    //Display summary
   }
-  // console.log(currentAccount);
 });
 
 // console.log(userName);
