@@ -79,7 +79,9 @@ const displayMovements = function (movements) {
   });
 };
 
-displayMovements(account1.movements);
+//const accountsMovements = accounts.map(account => account.movements);
+
+//displayMovements(account1.movements);
 
 const createUserName = function (accs) {
   accs.forEach(function (acc) {
@@ -94,17 +96,15 @@ const createUserName = function (accs) {
 createUserName(accounts);
 
 const calcDisplaySummary = function (movements) {
-  const incomes = account1.movements
+  const incomes = movements
     .filter(mov => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
   labelSumIn.textContent = `${incomes} € `;
 
-  const out = account1.movements
-    .filter(mov => mov < 0)
-    .reduce((acc, mov) => acc + mov);
+  const out = movements.filter(mov => mov < 0).reduce((acc, mov) => acc + mov);
   labelSumOut.textContent = `${Math.abs(out)} €`;
 
-  const intrest = account1.movements
+  const intrest = movements
     .filter(move => move > 0)
     .map(deposit => (deposit * 1.2) / 100)
     .filter(mov => mov >= 1)
@@ -112,13 +112,13 @@ const calcDisplaySummary = function (movements) {
   labelSumInterest.textContent = `${intrest} €`;
 };
 
-calcDisplaySummary(account1.movements);
+//calcDisplaySummary(account1.movements);
 
 const calculateBalance = function (movements) {
   const balance = movements.reduce((acc, mov) => acc + mov, 0);
   labelBalance.textContent = `${balance} €`;
 };
-calculateBalance(account1.movements);
+//calculateBalance(account1.movements);
 
 //Event listener
 
@@ -135,6 +135,10 @@ let logined = btnLogin.addEventListener('click', function (e) {
       currentAccount.owner.split(' ')[0]
     }`;
     containerApp.style.opacity = 100;
+    console.log(currentAccount.movements);
+    displayMovements(currentAccount.movements);
+    calcDisplaySummary(currentAccount.movements);
+    calculateBalance(currentAccount.movements);
     //Display movements
     //Display balance
     //Display summary
@@ -163,35 +167,35 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+//const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 const conversion = 1.1;
-const movemnetsUSD = movements.map(function (mov) {
-  // return mov * conversion;
-  return mov * conversion;
-});
+// const movemnetsUSD = movements.map(function (mov) {
+//   // return mov * conversion;
+//   return mov * conversion;
+// });
 
-const movemnetsUSDArrow = movements.map(move => move * conversion);
+//const movemnetsUSDArrow = movements.map(move => move * conversion);
 
 const movementsUSDFor = [];
 
-for (const move of movements) {
-  movementsUSDFor.push(move * conversion);
-}
+// for (const move of movements) {
+//   movementsUSDFor.push(move * conversion);
+// }
 
 //console.log(movemnetsUSD, movementsUSDFor);
 
-const movements2 = movements.map(
-  (mov, i) =>
-    `Movement ${i + 1}: You ${mov > 0 ? `diposeted` : `withdrew`} ${Math.abs(
-      mov
-    )}`
-  // if (mov > 0) {
-  //   return `Movement ${i + 1}: You diposeted ${mov}`;
-  // } else {
-  //   return `Movement ${i + 1}: You withdrew ${Math.abs(mov)}`;
-  // }
-);
+// const movements2 = movements.map(
+//   (mov, i) =>
+//     `Movement ${i + 1}: You ${mov > 0 ? `diposeted` : `withdrew`} ${Math.abs(
+//       mov
+//     )}`
+// if (mov > 0) {
+//   return `Movement ${i + 1}: You diposeted ${mov}`;
+// } else {
+//   return `Movement ${i + 1}: You withdrew ${Math.abs(mov)}`;
+// }
+// );
 
 //console.log(movements2);
 
