@@ -130,6 +130,13 @@ let logined = btnLogin.addEventListener('click', function (e) {
     acc => acc.username === inputLoginUsername.value
   );
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    //Display UI and Welcome message
+    labelWelcome.textContent = `Welcome back ${
+      currentAccount.owner.split(' ')[0]
+    }`;
+    //Display movements
+    //Display balance
+    //Display summary
   }
   // console.log(currentAccount);
 });
