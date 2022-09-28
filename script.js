@@ -140,6 +140,11 @@ let logined = btnLogin.addEventListener('click', function (e) {
   }
 });
 
+btnTransfer.addEventListener('click', function (e) {
+  e.preventDefault();
+  const ammount = inputTransferAmount;
+});
+
 // console.log(userName);
 
 // const namesOnly = accounts.map(name => name.owner.split(' '));
