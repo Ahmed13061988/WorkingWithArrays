@@ -115,6 +115,11 @@ const calculateBalance = function (acc) {
   labelBalance.textContent = `${acc.balance} €`;
 };
 
+const updateUi = function (currentAccount) {
+  displayMovements(currentAccount.movements);
+  calcDisplaySummary(currentAccount);
+  calculateBalance(currentAccount);
+};
 //Event listener
 
 let currentAccount;
@@ -131,12 +136,10 @@ let logined = btnLogin.addEventListener('click', function (e) {
     }`;
     containerApp.style.opacity = 100;
     console.log(currentAccount.movements);
-    displayMovements(currentAccount.movements);
-    calcDisplaySummary(currentAccount);
-    calculateBalance(currentAccount);
     inputLoginUsername.value = '';
     inputLoginPin.value = '';
     inputLoginPin.blur();
+    updateUi(currentAccount);
   }
 });
 
@@ -154,9 +157,7 @@ btnTransfer.addEventListener('click', function (e) {
   ) {
     currentAccount.movements.push(-ammount);
     receiverAccount.movements.push(ammount);
-    calculateBalance(currentAccount);
-    displayMovements(currentAccount.movements);
-    calcDisplaySummary(currentAccount);
+    updateUi(currentAccount);
   }
 
   console.log(ammount, receiverAccount);
