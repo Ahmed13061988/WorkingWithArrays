@@ -165,6 +165,10 @@ btnTransfer.addEventListener('click', function (e) {
   console.log(ammount, receiverAccount);
 });
 
+btnClose.addEventListener('click', function (e) {
+  e.preventDefault();
+});
+
 // console.log(userName);
 
 // const namesOnly = accounts.map(name => name.owner.split(' '));
