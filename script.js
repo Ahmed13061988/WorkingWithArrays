@@ -148,10 +148,13 @@ btnTransfer.addEventListener('click', function (e) {
   );
   if (
     ammount > 0 &&
+    receiverAccount &&
     currentAccount.balance >= ammount &&
     receiverAccount?.username !== currentAccount.username
-  )
-    receiverAccount.movements.push(ammount);
+  ) {
+    console.log('transfer valid');
+  }
+  //receiverAccount.movements.push(ammount);
 
   console.log(ammount, receiverAccount);
 });
