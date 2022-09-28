@@ -174,7 +174,12 @@ btnClose.addEventListener('click', function (e) {
     currentAccount.username === closeUsername &&
     currentAccount.pin === closePin
   ) {
-    console.log('closed');
+    const index = accounts.findIndex(
+      acc => acc.username === currentAccount.username
+    );
+
+    console.log(index);
+    //accounts.splice(index, 1);
   }
 });
 
