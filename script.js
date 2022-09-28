@@ -157,6 +157,8 @@ btnTransfer.addEventListener('click', function (e) {
   ) {
     currentAccount.movements.push(-ammount);
     receiverAccount.movements.push(ammount);
+    inputTransferAmount.value = '';
+    inputTransferTo.value = '';
     updateUi(currentAccount);
   }
 
