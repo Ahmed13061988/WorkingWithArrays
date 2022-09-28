@@ -142,7 +142,10 @@ let logined = btnLogin.addEventListener('click', function (e) {
 
 btnTransfer.addEventListener('click', function (e) {
   e.preventDefault();
-  const ammount = inputTransferAmount;
+  const ammount = Number(inputTransferAmount.value);
+  const receiverAccount = accounts.find(
+    acc => acc.username === inputTransferTo.value
+  );
 });
 
 // console.log(userName);
