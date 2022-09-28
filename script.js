@@ -110,9 +110,9 @@ const calcDisplaySummary = function (account) {
   labelSumInterest.textContent = `${intrest} €`;
 };
 
-const calculateBalance = function (movements) {
-  const balance = movements.reduce((acc, mov) => acc + mov, 0);
-  labelBalance.textContent = `${balance} €`;
+const calculateBalance = function (acc) {
+  acc.balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${acc.balance} €`;
 };
 
 //Event listener
@@ -133,7 +133,7 @@ let logined = btnLogin.addEventListener('click', function (e) {
     console.log(currentAccount.movements);
     displayMovements(currentAccount.movements);
     calcDisplaySummary(currentAccount);
-    calculateBalance(currentAccount.movements);
+    calculateBalance(currentAccount);
     inputLoginUsername.value = '';
     inputLoginPin.value = '';
     inputLoginPin.blur();
@@ -146,6 +146,10 @@ btnTransfer.addEventListener('click', function (e) {
   const receiverAccount = accounts.find(
     acc => acc.username === inputTransferTo.value
   );
+  if (ammount > 0 && )
+  
+  receiverAccount.movements.push(ammount);
+
   console.log(ammount, receiverAccount);
 });
 
