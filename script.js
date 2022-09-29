@@ -179,6 +179,7 @@ btnClose.addEventListener('click', function (e) {
     );
     accounts.splice(index, 1);
     containerApp.style.opacity = 0;
+    labelWelcome.textContent = 'Log in to get started';
   }
 });
 
@@ -458,3 +459,7 @@ for (const account of accounts) {
   if (account.owner === 'Jessica Davis') accountFor = Object.assign(account);
 }
 //console.log(accountFor);
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+console.log(movements.includes(-130));
