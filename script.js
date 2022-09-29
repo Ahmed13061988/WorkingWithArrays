@@ -463,6 +463,7 @@ for (const account of accounts) {
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 console.log(movements.includes(-130));
+console.log(movements.some(move => move === -130));
 
 const anyDeposits = movements.some(mov => mov > 500);
 console.log(anyDeposits);
