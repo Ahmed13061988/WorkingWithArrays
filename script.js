@@ -485,5 +485,11 @@ console.log(anyDeposits);
 
 // Every it's like &&
 
-const deposit1 = movements.every(mov => mov > 0);
+// const deposit1 = movements.every(mov => mov > 0);
+//console.log(deposit1);
+
+//Separete callBack
+const depositFun = move => move > 0;
+
+const deposit1 = account4.movements.every(depositFun);
 console.log(deposit1);
