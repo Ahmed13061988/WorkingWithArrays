@@ -187,7 +187,13 @@ btnClose.addEventListener('click', function (e) {
 btnLoan.addEventListener('click', function (e) {
   e.preventDefault();
   const ammount = Number(inputLoanAmount.value);
-  if( ammount > 0 && currentAccount.movements.some(mov => mov >= ammount / 10))
+  if (
+    ammount > 0 &&
+    currentAccount.movements.some(mov => mov >= ammount * 0.1)
+  ) {
+    currentAccount.movements.push(ammount);
+    updateUi(currentAccount);
+  }
 });
 
 // console.log(userName);
