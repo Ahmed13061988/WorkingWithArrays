@@ -183,6 +183,7 @@ btnClose.addEventListener('click', function (e) {
   }
 });
 
+// Calling the btnLoad to add event listener to it
 btnLoan.addEventListener('click', function (e) {
   e.preventDefault();
 });
