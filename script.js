@@ -183,6 +183,10 @@ btnClose.addEventListener('click', function (e) {
   }
 });
 
+btnLoan.addEventListener('click', function (e) {
+  e.preventDefault();
+});
+
 // console.log(userName);
 
 // const namesOnly = accounts.map(name => name.owner.split(' '));
