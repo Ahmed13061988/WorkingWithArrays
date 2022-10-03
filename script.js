@@ -520,7 +520,15 @@ console.log(movements);
 
 //Return < 0, A, B
 //Return > 0, B, A
+
+//Ascending
 movements.sort((a, b) => {
   if (a > b) return 1;
   if (a < b) return -1;
+});
+
+//Descending
+movements.sort((a, b) => {
+  if (a > b) return -1;
+  if (a < b) return 1;
 });
