@@ -197,6 +197,12 @@ btnLoan.addEventListener('click', function (e) {
   inputLoanAmount.value = '';
 });
 
+btnSort.addEventListener('click', function (e) {
+  e.preventDefault();
+  currentAccount.movements.sort((a, b) => a - b);
+  updateUi(currentAccount);
+});
+
 // console.log(userName);
 
 // const namesOnly = accounts.map(name => name.owner.split(' '));
