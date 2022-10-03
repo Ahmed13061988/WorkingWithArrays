@@ -517,4 +517,10 @@ const owners = ['Ahmed', 'Hassan', 'Hussein', 'Muhammed', 'Ali'];
 console.log(owners.sort());
 
 console.log(movements);
-console.log(movements.sort());
+
+//Return < 0, A, B
+//Return > 0, B, A
+movements.sort((a, b) => {
+  if (a > b) return 1;
+  if (a < b) return -1;
+});
