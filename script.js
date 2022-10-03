@@ -515,3 +515,6 @@ const sumOfAllMovements2 = accounts
 const owners = ['Ahmed', 'Hassan', 'Hussein', 'Muhammed', 'Ali'];
 
 console.log(owners.sort());
+
+console.log(movements);
+console.log(movements.sort());
