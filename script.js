@@ -501,5 +501,8 @@ const arr = [[[1, 2], 3], [[4, 5], 6], 7, 8];
 let allMovements = [];
 accounts.forEach(function (acc) {
   allMovements.push(acc.movements);
-  console.log(allMovements.flat());
+  //console.log(allMovements.flat());
 });
+
+const sumOfAllMovements = allMovements.flat().reduce((acu, cur) => acu + cur);
+console.log(sumOfAllMovements);
