@@ -505,9 +505,13 @@ accounts.forEach(function (acc) {
 });
 
 const sumOfAllMovements = allMovements.flat().reduce((acu, cur) => acu + cur);
-console.log(sumOfAllMovements);
+//console.log(sumOfAllMovements);
 
 const sumOfAllMovements2 = accounts
   .flatMap(acc => acc.movements)
   .reduce((acu, cur) => acu + cur);
-console.log(sumOfAllMovements2);
+//console.log(sumOfAllMovements2);
+
+const owners = ['Ahmed', 'Hassan', 'Hussein', 'Muhammed', 'Ali'];
+
+console.log(owners.sort());
