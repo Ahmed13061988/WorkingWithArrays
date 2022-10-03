@@ -496,3 +496,6 @@ console.log(deposit1);
 
 const arr = [[[1, 2], 3], [[4, 5], 6], 7, 8];
 console.log(arr.flat(2));
+
+const allMovements = accounts.map(acc => acc.movements);
+console.log(allMovements.flat());
