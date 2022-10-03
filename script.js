@@ -543,9 +543,13 @@ movements.sort((a, b) => {
 });
 
 //another way to solve this
-movements.sort((a, b) => a - b); //This mean return positive number, it will sort ascending
+// movements.sort((a, b) => a - b); //This mean return positive number, it will sort ascending
 
-console.log('a-b', movements);
+// console.log('a-b', movements);
 
-movements.sort((a, b) => b - a); // This will return a nagative number, it will sort Descending
-console.log('b-a', movements);
+// movements.sort((a, b) => b - a); // This will return a nagative number, it will sort Descending
+// console.log('b-a', movements);
+
+const arrayOfNumbers = [34, 65, 1, 89, -100];
+arrayOfNumbers.sort((a, b) => b - a);
+console.log(arrayOfNumbers);
