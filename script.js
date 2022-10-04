@@ -561,3 +561,5 @@ console.log(movements);
 
 const x = new Array(7); // creating an array with seven placeholders
 console.log(x);
+x.fill(1); // it will fill it with the element we passed
+console.log(x);
