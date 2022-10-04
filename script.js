@@ -574,5 +574,10 @@ const y = Array.from({ length: 7 }, () => 1);
 
 console.log(y);
 
-const z = Array.from({ length: 7 }, (cur, i) => 1 + i);
+const z = Array.from({ length: 7 }, (_, i) => 1 + i);
 console.log(z);
+
+const dice = Array.from({ length: 100 }, (_, i) =>
+  Math.trunc(Math.random() * 6 + 1)
+);
+console.log(dice);
