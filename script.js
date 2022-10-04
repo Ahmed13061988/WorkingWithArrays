@@ -550,6 +550,14 @@ movements.sort((a, b) => {
 // movements.sort((a, b) => b - a); // This will return a nagative number, it will sort Descending
 // console.log('b-a', movements);
 
-const arrayOfNumbers = [34, 65, 1, 89, -100];
-arrayOfNumbers.sort((a, b) => b - a);
+const arrayOfNumbers = [34, 65, 1, 89, 80, 81, 3000, 4000, 5000, -100];
+arrayOfNumbers.sort();
 console.log(arrayOfNumbers);
+
+movements.sort();
+console.log(movements);
+
+//Creating arrays progrommatically
+
+const x = new Array(7); // creating an array with seven placeholders
+console.log(x);
