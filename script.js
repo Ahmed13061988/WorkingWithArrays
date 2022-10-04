@@ -503,7 +503,7 @@ const depositFun = move => move > 0;
 const deposit1 = account4.movements.every(depositFun);
 console.log(deposit1);
 
-const arr = [[[1, 2], 3], [[4, 5], 6], 7, 8];
+//const arr = [[[1, 2], 3], [[4, 5], 6], 7, 8];
 //console.log(arr.flat(2));
 
 //const allMovements = accounts.map(acc => acc.movements);
@@ -561,5 +561,9 @@ console.log(movements);
 
 const x = new Array(7); // creating an array with seven placeholders
 console.log(x);
-x.fill(1, 3, 6); // it will fill it with the element we passed
+x.fill(1, 3, 6); // it will fill it with the element we passed, in this case we pass the value, start index and last index which is not included
 console.log(x);
+
+const arr = [1, 2, 3, 4, 5, 6];
+arr.fill(23, 4); // this will replace 5 , 6 elements and replace them with 23
+console.log(arr);
