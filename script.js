@@ -567,3 +567,9 @@ console.log(x);
 const arr = [1, 2, 3, 4, 5, 6];
 arr.fill(23, 4); // this will replace 5 , 6 elements and replace them with 23
 console.log(arr);
+
+//Array.from()
+
+const y = Array.from({ length: 7 }, () => 1);
+
+console.log(y);
