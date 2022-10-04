@@ -581,3 +581,11 @@ const dice = Array.from({ length: 100 }, (_, i) =>
   Math.trunc(Math.random() * 6 + 1)
 );
 console.log(dice);
+
+labelBalance.addEventListener('click', function () {
+  const movementsUI = Array.from(
+    document.querySelectorAll('.movements__value')
+  );
+
+  console.log(movementsUI.map(el => el.textContent.replace('€', '')));
+});
