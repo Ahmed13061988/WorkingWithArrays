@@ -596,3 +596,7 @@ labelBalance.addEventListener('click', function () {
 //Mutating the array
 // .push, .unshift adding to an array
 //.pop, .shift, .splice to remove from array
+
+const sortArray = [1, 59, 300, 560, 4000, -4000];
+console.log(sortArray.sort((a, b) => a - b));
+console.log(sortArray.sort((a, b) => b - a));
