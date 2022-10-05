@@ -600,3 +600,5 @@ labelBalance.addEventListener('click', function () {
 const sortArray = [1, 59, 300, 560, 4000, -4000];
 console.log(sortArray.sort((a, b) => a - b));
 console.log(sortArray.sort((a, b) => b - a));
+const fillArray = new Array(3);
+console.log(fillArray.fill(1));
