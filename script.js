@@ -485,12 +485,12 @@ for (const account of accounts) {
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-console.log(movements.includes(-130));
-console.log(movements.some(move => move === -130));
+//console.log(movements.includes(-130));
+//console.log(movements.some(move => move === -130));
 
 // Some it's like ||
 const anyDeposits = movements.some(mov => mov > 500);
-console.log(anyDeposits);
+//console.log(anyDeposits);
 
 // Every it's like &&
 
@@ -501,7 +501,7 @@ console.log(anyDeposits);
 const depositFun = move => move > 0;
 
 const deposit1 = account4.movements.every(depositFun);
-console.log(deposit1);
+//console.log(deposit1);
 
 //const arr = [[[1, 2], 3], [[4, 5], 6], 7, 8];
 //console.log(arr.flat(2));
@@ -523,9 +523,9 @@ const sumOfAllMovements2 = accounts
 
 const owners = ['Ahmed', 'Hassan', 'Hussein', 'Muhammed', 'Ali'];
 
-console.log(owners.sort());
+//console.log(owners.sort());
 
-console.log(movements);
+//console.log(movements);
 
 //Return < 0, A, B
 //Return > 0, B, A
@@ -552,35 +552,35 @@ movements.sort((a, b) => {
 
 const arrayOfNumbers = [34, 65, 1, 89, 80, 81, 3000, 4000, 5000, -100];
 arrayOfNumbers.sort();
-console.log(arrayOfNumbers);
+//console.log(arrayOfNumbers);
 
 movements.sort();
-console.log(movements);
+//console.log(movements);
 
 //Creating arrays progrommatically
 
 const x = new Array(7); // creating an array with seven placeholders
-console.log(x);
+//console.log(x);
 x.fill(1, 3, 6); // it will fill it with the element we passed, in this case we pass the value, start index and last index which is not included
-console.log(x);
+//console.log(x);
 
 const arr = [1, 2, 3, 4, 5, 6];
 arr.fill(23, 4); // this will replace 5 , 6 elements and replace them with 23
-console.log(arr);
+//console.log(arr);
 
 //Array.from()
 
 const y = Array.from({ length: 7 }, () => 1);
 
-console.log(y);
+//console.log(y);
 
 const z = Array.from({ length: 7 }, (_, i) => 1 + i);
-console.log(z);
+//console.log(z);
 
 const dice = Array.from({ length: 100 }, (_, i) =>
   Math.trunc(Math.random() * 6 + 1)
 );
-console.log(dice);
+//console.log(dice);
 
 labelBalance.addEventListener('click', function () {
   const movementsUI = Array.from(
@@ -588,7 +588,7 @@ labelBalance.addEventListener('click', function () {
     el => Number(el.textContent.replace('€', ''))
   );
 
-  console.log(movementsUI);
+  //console.log(movementsUI);
 });
 
 //What array methods to use and when
@@ -598,30 +598,30 @@ labelBalance.addEventListener('click', function () {
 //.pop, .shift, .splice to remove from array
 
 const sortArray = [1, 59, 300, 560, 4000, -4000];
-console.log(sortArray);
-console.log(sortArray.reverse());
-console.log(sortArray.sort((a, b) => a - b));
-console.log(sortArray.sort((a, b) => b - a));
+//console.log(sortArray);
+//console.log(sortArray.reverse());
+//console.log(sortArray.sort((a, b) => a - b));
+//console.log(sortArray.sort((a, b) => b - a));
 const fillArray = new Array(3);
-console.log(fillArray.fill(1));
+//console.log(fillArray.fill(1));
 
 //Generate a new array
 // .map, .filter, .slice, .concat, .flat, .flatMap
 const array2 = [1, 2, 3, 4, 5, 6];
 const newArray2 = array2.map(el => el * 2);
-console.log(newArray2);
+//console.log(newArray2);
 const filteredArray2 = array2.filter(el => el >= 3);
-console.log(filteredArray2);
+//console.log(filteredArray2);
 const slicedArray2 = array2.slice(); //creating shallow copy
 const sliced2 = array2.slice(0, 3);
-console.log(sliced2);
+//console.log(sliced2);
 
 //AN ARRAY INDEX
 //indexOf, .findIndex
 const array3 = ['ahmed', 'Ali', 'Hussein', 3, 5];
-console.log(array3.indexOf('Ali'));
-console.log(array3.indexOf('Moih')); // -1 mo index found
-console.log(array3.findIndex(el => el === 'ahmed')); // boolean to find the element
+//console.log(array3.indexOf('Ali'));
+//console.log(array3.indexOf('Moih')); // -1 mo index found
+//console.log(array3.findIndex(el => el === 'ahmed')); // boolean to find the element
 
 //AN ARRAY ELEMENT
 //find
@@ -636,13 +636,31 @@ const array4 = [
   },
 ];
 
-console.log(array4.find(el => el.name === 'Ahmed'));
+// console.log(array4.find(el => el.name === 'Ahmed'));
 
 //ARRAY INCLUDES ELEMENT
 // includes, some, every
 
 const array5 = ['ahmed', 'ali', 5];
 
-console.log(array5.includes('ahmed'));
-console.log(array5.some(el => el > 4));
-console.log(array5.every(el => el === 0));
+// console.log(array5.includes('ahmed'));
+// console.log(array5.some(el => el > 4));
+// console.log(array5.every(el => el === 0));
+
+//ARRAY into a STRING
+// join
+
+const array6 = [1, 2, 3, 4, 5];
+//console.log(array6.join('-'));
+
+//ARRAY to reduce into one value
+
+const array7 = [67, -30, -70];
+//console.log(array7.reduce((acc, current) => acc + current));
+
+const totall = accounts
+  .map(mov => mov.movements)
+  .flat()
+  .filter(mov => mov > 0)
+  .reduce((acc, cur) => acc + cur);
+console.log(totall);
