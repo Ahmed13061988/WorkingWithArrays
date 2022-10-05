@@ -621,3 +621,17 @@ const array3 = ['ahmed', 'Ali', 'Hussein', 3, 5];
 console.log(array3.indexOf('Ali'));
 console.log(array3.indexOf('Moih')); // -1 mo index found
 console.log(array3.findIndex(el => el === 'ahmed')); // boolean to find the element
+
+//AN ARRAY ELEMENT
+const array4 = [
+  {
+    name: 'Ali',
+    position: 'dad',
+  },
+  {
+    name: 'Ahmed',
+    position: 'son',
+  },
+];
+
+console.log(array4.find(el => el.name === 'Ahmed'));
