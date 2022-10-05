@@ -584,8 +584,11 @@ console.log(dice);
 
 labelBalance.addEventListener('click', function () {
   const movementsUI = Array.from(
-    document.querySelectorAll('.movements__value')
+    document.querySelectorAll('.movements__value'),
+    el => Number(el.textContent.replace('€', ''))
   );
 
-  console.log(movementsUI.map(el => el.textContent.replace('€', '')));
+  console.log(movementsUI);
 });
+
+//What array methods to use and when
