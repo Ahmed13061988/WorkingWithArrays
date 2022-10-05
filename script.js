@@ -592,3 +592,7 @@ labelBalance.addEventListener('click', function () {
 });
 
 //What array methods to use and when
+
+//Mutating the array
+// .push, .unshift adding to an array
+//.pop, .shift, .splice to remove from array
