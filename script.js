@@ -658,9 +658,16 @@ const array6 = [1, 2, 3, 4, 5];
 const array7 = [67, -30, -70];
 //console.log(array7.reduce((acc, current) => acc + current));
 
+//1-
 const totall = accounts
   .map(mov => mov.movements)
   .flat()
   .filter(mov => mov > 0)
   .reduce((acc, cur) => acc + cur);
 console.log(totall);
+
+//2-
+const thousandDollars = accounts
+  .flatMap(acc => acc.movements)
+  .filter(acc => acc >= 1000).length;
+console.log(thousandDollars);
