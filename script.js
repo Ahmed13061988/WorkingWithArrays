@@ -612,3 +612,6 @@ const newArray2 = array2.map(el => el * 2);
 console.log(newArray2);
 const filteredArray2 = array2.filter(el => el >= 3);
 console.log(filteredArray2);
+const slicedArray2 = array2.slice(); //creating shallow copy
+const sliced2 = array2.slice(0, 3);
+console.log(sliced2);
