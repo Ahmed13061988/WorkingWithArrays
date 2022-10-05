@@ -604,3 +604,11 @@ console.log(sortArray.sort((a, b) => a - b));
 console.log(sortArray.sort((a, b) => b - a));
 const fillArray = new Array(3);
 console.log(fillArray.fill(1));
+
+//Generate a new array
+// .map, .filter, .slice, .concat, .flat, .flatMap
+const array2 = [1, 2, 3, 4, 5, 6];
+const newArray2 = array2.map(el => el * 2);
+console.log(newArray2);
+const filteredArray2 = array2.filter(el => el >= 3);
+console.log(filteredArray2);
