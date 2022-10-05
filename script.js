@@ -663,11 +663,17 @@ const totall = accounts
   .map(mov => mov.movements)
   .flat()
   .filter(mov => mov > 0)
-  .reduce((acc, cur) => acc + cur);
+  .reduce((acc, cur) => acc + cur, 0);
 console.log(totall);
 
 //2-
+// const thousandDollars = accounts
+//   .flatMap(acc => acc.movements)
+//   .filter(acc => acc >= 1000).length;
+// console.log(thousandDollars);
+
 const thousandDollars = accounts
   .flatMap(acc => acc.movements)
-  .filter(acc => acc >= 1000).length;
-console.log(thousandDollars);
+  .reduce((count, current) => {
+    current >= 1000 ? count + 1 : count;
+  }, 0);
