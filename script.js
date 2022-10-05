@@ -617,12 +617,14 @@ const sliced2 = array2.slice(0, 3);
 console.log(sliced2);
 
 //AN ARRAY INDEX
+//indexOf, .findIndex
 const array3 = ['ahmed', 'Ali', 'Hussein', 3, 5];
 console.log(array3.indexOf('Ali'));
 console.log(array3.indexOf('Moih')); // -1 mo index found
 console.log(array3.findIndex(el => el === 'ahmed')); // boolean to find the element
 
 //AN ARRAY ELEMENT
+//find
 const array4 = [
   {
     name: 'Ali',
@@ -635,3 +637,12 @@ const array4 = [
 ];
 
 console.log(array4.find(el => el.name === 'Ahmed'));
+
+//ARRAY INCLUDES ELEMENT
+// includes, some, every
+
+const array5 = ['ahmed', 'ali', 5];
+
+console.log(array5.includes('ahmed'));
+console.log(array5.some(el => el > 4));
+console.log(array5.every(el => el === 0));
