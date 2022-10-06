@@ -681,3 +681,7 @@ const thousandDollars = accounts
 let a = 10;
 
 console.log(++a);
+
+//3-
+const sums = accounts.flatMap(mov => mov.movements);
+console.log(sums);
