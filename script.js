@@ -688,6 +688,7 @@ const sums = accounts
   .reduce(
     (sums, current) => {
       current > 0 ? (sums.deposits += current) : (sums.withdrawals += current);
+      return sums;
     },
     { deposits: 0, withdrawals: 0 }
   );
