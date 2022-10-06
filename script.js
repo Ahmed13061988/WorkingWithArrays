@@ -687,7 +687,8 @@ const sums = accounts
   .flatMap(mov => mov.movements)
   .reduce(
     (sums, current) => {
-      current > 0 ? (sums.deposits += current) : (sums.withdrawals += current);
+      // current > 0 ? (sums.deposits += current) : (sums.withdrawals += current);
+      sums[current > 0 ? 'deposits' : 'withdrawals'] += current;
       return sums;
     },
     { deposits: 0, withdrawals: 0 }
