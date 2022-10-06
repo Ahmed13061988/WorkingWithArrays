@@ -675,7 +675,7 @@ console.log(totall);
 const thousandDollars = accounts
   .flatMap(acc => acc.movements)
   .reduce((count, current) => {
-    current >= 1000 ? count + 1 : count;
+    current >= 1000 ? ++count : count;
   }, 0);
 
 let a = 10;
