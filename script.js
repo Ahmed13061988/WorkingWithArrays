@@ -683,5 +683,12 @@ let a = 10;
 console.log(++a);
 
 //3-
-const sums = accounts.flatMap(mov => mov.movements);
+const sums = accounts
+  .flatMap(mov => mov.movements)
+  .reduce(
+    (sums, current) => {
+      current > 0 ? (sums.deposits += current) : (sums.withdrawals += current);
+    },
+    { deposits: 0, withdrawals: 0 }
+  );
 console.log(sums);
