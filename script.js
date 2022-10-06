@@ -677,3 +677,7 @@ const thousandDollars = accounts
   .reduce((count, current) => {
     current >= 1000 ? count + 1 : count;
   }, 0);
+
+let a = 10;
+
+console.log(++a);
