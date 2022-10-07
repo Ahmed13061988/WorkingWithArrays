@@ -698,8 +698,16 @@ console.log(sums);
 // convert title case
 
 const convertTitleCase = function (title) {
-  return title.split(' ').map(word => word.toLoweCase());
+  return title.split(' ').map(word => {
+    return word.length > 1
+      ? word.split('').forEach((letter, i) => {
+          if (letter[i] === 0) {
+            return letter[i].toUpperCase();
+          }
+        })
+      : word;
+  });
 };
 
 console.log(convertTitleCase('this is a nice title'));
-console.log(convertTitleCase('this is a LONG title but not to long'));
+//console.log(convertTitleCase('this is a LONG title but not to long'));
