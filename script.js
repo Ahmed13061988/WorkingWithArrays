@@ -702,8 +702,11 @@ const convertTitleCase = function (title) {
   const titleCase = title
     .toLocaleLowerCase()
     .split(' ')
-    .map(word =>
-      expseptions.includes(word) ? word : word[0].toUpperCase() + word.slice(1)
+    .map(
+      word =>
+        expseptions.includes(word)
+          ? word
+          : word[0].toUpperCase() + word.slice(1) // if the word is included with the current word then just leave it, if not just capitalized
     );
   return titleCase;
 };
