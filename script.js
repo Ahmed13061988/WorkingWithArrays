@@ -698,7 +698,17 @@ console.log(sums);
 // convert title case
 
 const convertTitleCase = function (title) {
-  const expseptions = ['a', 'an', 'the', 'but', 'or', 'on', 'in', 'with'];
+  const expseptions = [
+    'a',
+    'an',
+    'and',
+    'the',
+    'but',
+    'or',
+    'on',
+    'in',
+    'with',
+  ];
   const titleCase = title
     .toLocaleLowerCase()
     .split(' ')
@@ -709,8 +719,9 @@ const convertTitleCase = function (title) {
           : word[0].toUpperCase() + word.slice(1) // if the word is included with the current word then just leave it, if not just capitalized
     )
     .join(' ');
-  return titleCase;
+  return titleCase[0].toUpperCase() + titleCase.slice(1);
 };
 
 console.log(convertTitleCase('this is a nice title'));
 console.log(convertTitleCase('this is a LONG title but not to long'));
+console.log(convertTitleCase('and this one is also good'));
