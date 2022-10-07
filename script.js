@@ -707,7 +707,8 @@ const convertTitleCase = function (title) {
         expseptions.includes(word)
           ? word
           : word[0].toUpperCase() + word.slice(1) // if the word is included with the current word then just leave it, if not just capitalized
-    );
+    )
+    .join(' ');
   return titleCase;
 };
 
