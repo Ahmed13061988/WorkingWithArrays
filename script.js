@@ -698,16 +698,15 @@ console.log(sums);
 // convert title case
 
 const convertTitleCase = function (title) {
-  return title.split(' ').map(word => {
-    return word.length > 1
-      ? word.split('').forEach((letter, i) => {
-          if (letter[i] === 0) {
-            return letter[i].toUpperCase();
-          }
-        })
-      : word;
-  });
+  const expseptions = ['a', 'an', 'the', 'but', 'or', 'on', 'in', 'with'];
+  const titleCase = title
+    .toLocaleLowerCase()
+    .split(' ')
+    .map(word =>
+      expseptions.includes(word) ? word : word[0].toUpperCase() + word.slice(1)
+    );
+  return titleCase;
 };
 
 console.log(convertTitleCase('this is a nice title'));
-//console.log(convertTitleCase('this is a LONG title but not to long'));
+console.log(convertTitleCase('this is a LONG title but not to long'));
