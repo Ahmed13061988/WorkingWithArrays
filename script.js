@@ -694,3 +694,12 @@ const sums = accounts
     { deposits: 0, withdrawals: 0 }
   );
 console.log(sums);
+
+// convert title case
+
+const convertTitleCase = function (title) {
+  return title.split(' ').map(word => word.toLoweCase());
+};
+
+console.log(convertTitleCase('this is a nice title'));
+console.log(convertTitleCase('this is a LONG title but not to long'));
