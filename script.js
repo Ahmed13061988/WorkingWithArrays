@@ -725,3 +725,4 @@ const convertTitleCase = function (title) {
 console.log(convertTitleCase('this is a nice title'));
 console.log(convertTitleCase('this is a LONG title but not to long'));
 console.log(convertTitleCase('and this one is also good'));
+// This was an example how we can use includes on array.
